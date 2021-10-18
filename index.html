@@ -13,7 +13,7 @@
     <!-- Bootstrap Js -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-     <!-- My Style Css -->
+    <!-- My Style Css -->
     <link href="/src/css/style.css" rel="stylesheet">
     <title>Analizador LL1</title>
 </head>
@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand titulo" href="#"> 
+            <a class="navbar-brand titulo" href="#">
                 <img src="src/resources/UCaldas.png" class="img">
                 <i class="fab fa-octopus-deploy"></i>
                 El Calamar-Analizador LL1
@@ -34,33 +34,66 @@
         </div>
     </nav>
 
-    <footer class="text-center text-white" >
+    <section class="container mt-4">
+        <div class="row">
+            <!--Seccion de carga del archivo y gramatica a analizar-->
+            <div class="col-5 ">
+                <button class="btn color-blue mb-3" type="file"><i class="bi bi-arrow-up-circle"></i> Cargar Json</button>
+
+                <input type="file" class="file-select" aria-label="texto">
+                <form>
+                    <label for="exampleFormControlTextarea1" class="form-label">
+                        <b>Gramatica</b> 
+                    </label>
+                    <textarea class="form-control text-ancho mb-3" id="exampleFormControlTextarea1" rows="10" col="1"></textarea>
+                    <button type="submit" class="btn color-blue mb-3">
+                        <i class="bi bi-terminal"></i> Analizar Gramatica
+                    </button>
+                </form>
+            </div>
+
+            <div class="col p-3">
+                <label for="exampleFormControlTextarea1" class="form-label">
+                    <b>Resultados</b> 
+                </label>
+
+                <div id="global" class="border bg-light rounded mb-3">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum officia, sequi obcaecati quos ut nam rem culpa unde vel cum esse iste quod. Officia earum error asperiores rerum labore?</p>
+                </div> 
+
+                <button class="btn color-blue mb-3"><i class="bi bi-terminal"></i> Primeros</button>
+                <button class="btn color-blue mb-3"><i class="bi bi-arrow-bar-right"></i> Siguientes</button>
+                <button class="btn color-blue mb-3"><i class="bi bi-code-slash"></i> Conjunto Prediccion</button>
+                <button class="btn color-blue mb-3"><i class="bi bi-braces"></i> Todo</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-white">
         <div class="container p-1 pb-4">
             <p class="d-flex justify-content-center align-items-center">
-              Estructura de Lenguajes
+                Estructura de Lenguajes
             </p>
             <p class="d-flex justify-content-center align-items-center">
                 Cristian David Escobar Castillo
             </p>
-            <a  class="p-2 f-element"
-                href="https://github.com/CristianDavidEC/Analizador_LL1.git" target="_blank">
+            <a class="p-2 f-element" href="https://github.com/CristianDavidEC/Analizador_LL1.git" target="_blank">
                 <i class="bi bi-github"></i>
                 Github Repository
             </a>
 
-            <a  class="p-2 f-element"
-                href="https://interacpedia.com/user/cristian-david-escobar-castillo" target="_blank">
+            <a class="p-2 f-element" href="https://interacpedia.com/user/cristian-david-escobar-castillo"
+                target="_blank">
                 <i class="bi bi-person-circle"></i>
                 Interacpedia
             </a>
 
-            <a  class="p-2 f-element"
-                href="https://www.instagram.com/cristiandavidec/" target="_blank">
+            <a class="p-2 f-element" href="https://www.instagram.com/cristiandavidec/" target="_blank">
                 <i class="bi bi-instagram"></i>
                 Instagram
             </a>
         </div>
-      </footer>
+    </footer>
 
 </body>
 
