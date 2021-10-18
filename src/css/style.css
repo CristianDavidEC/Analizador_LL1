@@ -1,0 +1,43 @@
+body{
+    position: relative;
+    padding-bottom: 10rem;
+    min-height: 100vh;
+}
+
+.img {
+    height: 35%;
+    width: 35%;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    color: #003B70 !important;
+}
+
+.color-blue {
+    background-color: #003B70;
+    color: aliceblue;
+}
+
+.color-blue:hover {
+    background-color: #004886;
+    color: aliceblue;
+}
+
+.f-element{
+    text-decoration:none;
+    color: aliceblue;
+}
+
+.f-element:hover{
+    text-decoration:none;
+    color: rgb(179, 217, 250);
+
+}
+
+footer {
+    background-color: #003B70;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
