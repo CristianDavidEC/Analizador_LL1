@@ -42,14 +42,21 @@ footer {
     width: 100%;
 }
 
-#global {
+#resultado {
 	height: 21rem;
-	width: 39rem;
+}
+
+#contenido{
+	height: 16rem;
+}
+
+.scroll{ 
 	border: 1px solid #ddd;
 	background: #f1f1f1;
 	overflow-y: scroll;
     overflow-x: hidden;
 }
+
 
 .btn-file {
     position: relative;

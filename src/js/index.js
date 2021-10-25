@@ -1,7 +1,12 @@
 'use strict';
 
+import Controlador from './Controlador/controlador.js'
+
 document.addEventListener('DOMContentLoaded', event => {
-    
+
+    let controlador = new Controlador();
+    let contenido = null;
+
     //lectura del Archivo
     let archivo = document.querySelector('#json');
     archivo.addEventListener('change', (e) => {
@@ -9,17 +14,21 @@ document.addEventListener('DOMContentLoaded', event => {
         if (json) {
             let reader = new FileReader();
             reader.onload = function(eve) {
-                let contenido = eve.target.result;
-                console.log(contenido)
+                contenido = eve.target.result;
                 document.querySelector('#contenido').innerText = contenido;
-                let objeto = JSON.parse(contenido)
-                console.log(objeto)
+                
             }
-            reader.readAsText(json)
+            reader.readAsText(json);
+
         } else {
             console.log('error al cargar el archivo')
         }
+    });
 
+    let botonAnalizar = document.querySelector('#analizar-gramatica');
+    botonAnalizar.addEventListener('click', () => {
+        controlador.obtenerObjeto(contenido);
+        console.log(controlador.getAnalizador().getPrimeros())  
     })
 
 })
