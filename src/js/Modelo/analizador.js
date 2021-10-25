@@ -48,13 +48,4 @@ export default class Analizador {
         return primeros;
     }
 
-
-
-
-
-
-    
-
-
-
 }
