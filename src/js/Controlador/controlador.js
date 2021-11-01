@@ -22,8 +22,11 @@ export default class Controlador {
     obtenerObjeto(datos){
         let objeto = JSON.parse( datos );
         this.setObjeto(objeto);
-
         this.analizador.AnalizarGramatica( objeto );
+    }
+
+    primeros () {
+        console.log(this.analizador.getPrimeros());
     }
 
 

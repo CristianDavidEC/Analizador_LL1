@@ -4,8 +4,8 @@ import Controlador from './Controlador/controlador.js'
 
 document.addEventListener('DOMContentLoaded', event => {
 
-    let controlador = new Controlador();
-    let contenido = null;
+    var controlador = new Controlador();
+    var contenido = null;
 
     //lectura del Archivo
     let archivo = document.querySelector('#json');
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', event => {
             reader.onload = function(eve) {
                 contenido = eve.target.result;
                 document.querySelector('#contenido').innerText = contenido;
-                
             }
             reader.readAsText(json);
 
@@ -25,10 +24,16 @@ document.addEventListener('DOMContentLoaded', event => {
         }
     });
 
+    //TODO: crear animacion de carga o procesando
     let botonAnalizar = document.querySelector('#analizar-gramatica');
-    botonAnalizar.addEventListener('click', () => {
-        controlador.obtenerObjeto(contenido);
-        console.log(controlador.getAnalizador().getPrimeros())  
-    })
+    botonAnalizar.addEventListener("click", (e) => {
+        controlador.obtenerObjeto( contenido );
+        console.log( 'Analizando ...' )
+    });
+
+    let botonPrimeros = document.querySelector('#primeros');
+    botonPrimeros.addEventListener("click", (e) => {
+        controlador.primeros();
+    });
 
 })
