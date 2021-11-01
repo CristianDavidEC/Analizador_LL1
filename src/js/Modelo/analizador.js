@@ -40,21 +40,17 @@ export default class Analizador {
 
             //Verifica las condiciones para &
             if (simbolos[0] === '&') {
-                console.log(simbolos)
                 // Si y1 hasta yn tiene & agregar & a Prim(x)
                 if (simbolos.every( e => simbolos[0] == e )) {
                     primeros.push( simbolos[0] );
                 } // Si y1 es & entonces agregar Prim(y2) a Prim(x)
                 else {
-                    console.log('landa con letra')
                     var found = simbolos.find( e => e !== '&' );
                     // y1 NO es terminal -> agregar Prim(y1) a Prim(x)
                     if( listaNoTerminales.includes( found ) ) {
-                        console.log('aqui')
                         return this.procesarPrimeros(gramatica, found, primeros, listaNoTerminales);
                     } // y1 es terminal -> agregar y1 a Prim(x)
                     else {
-                        console.log('terminal', found)
                         primeros.push( found );
                     }
                 }
