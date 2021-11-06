@@ -29,7 +29,8 @@ export default class Controlador {
         console.log(this.analizador.getPrimeros());
     }
 
-
-
+    siguientes () {
+        console.log(this.analizador.getSiguientes())
+    }
 
 }

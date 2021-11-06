@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', event => {
         let json = e.target.files[0];
         if (json) {
             let reader = new FileReader();
-            reader.onload = function(eve) {
+            reader.onload = function (eve) {
                 contenido = eve.target.result;
                 document.querySelector('#contenido').innerText = contenido;
             }
@@ -27,13 +27,22 @@ document.addEventListener('DOMContentLoaded', event => {
     //TODO: crear animacion de carga o procesando
     let botonAnalizar = document.querySelector('#analizar-gramatica');
     botonAnalizar.addEventListener("click", (e) => {
-        controlador.obtenerObjeto( contenido );
-        console.log( 'Analizando ...' )
+        if (contenido !== null) {
+            controlador.obtenerObjeto(contenido);
+            console.log('Analizando ...')
+        } else {
+            console.log('no se ha cargado el archivo');
+        }
     });
 
     let botonPrimeros = document.querySelector('#primeros');
     botonPrimeros.addEventListener("click", (e) => {
         controlador.primeros();
+    });
+
+    let botonSiguientes = document.querySelector('#siguientes');
+    botonSiguientes.addEventListener("click", (e) => {
+        controlador.siguientes();
     });
 
 })
