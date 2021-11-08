@@ -1,0 +1,12 @@
+{
+  "nombre_gramatica" : "gramatica1",
+  "no_terminales": ["E", "E'", "T", "T'", "F"],
+  "procucion_inicial": "E", 
+  "gramatica" : {
+    "E" : ["T E'"],
+    "E'" : ["+ T E'", "&"],
+    "T" : ["F T'"],
+    "T'" : ["* F ", "&"],
+    "F" : ["id", "( E )"]
+  }
+}

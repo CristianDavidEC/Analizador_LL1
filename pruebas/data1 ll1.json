@@ -1,0 +1,12 @@
+{
+  "nombre_gramatica" : "gramatica2",
+  "no_terminales": ["X", "Y", "Z", "W", "V"],
+  "procucion_inicial": "X", 
+  "gramatica" : {
+    "X" : ["ab Y", "cd", "&"],
+    "Y" : ["Z W a", "+ V W"],
+    "Z" : ["pa", "&"],
+    "W" : ["mm Z"],
+    "V" : ["a Y X", "pp V"]
+  }
+}

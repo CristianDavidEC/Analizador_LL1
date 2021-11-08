@@ -1,0 +1,13 @@
+{
+  "nombre_gramatica" : "gramatica3",
+  "no_terminales": ["A", "B", "A'", "C", "D", "C'"],
+  "procucion_inicial": "A", 
+  "gramatica" : {
+    "A" : ["xx B C", "&"],
+    "B" : ["a x + A'", "C D"],
+    "A'" : ["adb+", "&", "C'"],
+    "C" : ["axx C' D'", "D xyzy", "&"],
+    "D" : ["ajx", "Uxy", "A'"],
+    "C'" : ["xxx B"]
+  }
+}

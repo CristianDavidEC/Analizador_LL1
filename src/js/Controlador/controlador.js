@@ -5,6 +5,7 @@ export default class Controlador {
     constructor () {
         this.objeto = null;
         this.analizador = new Analizador();
+        this.esll1 = null;
     }
 
     setObjeto (objeto) {
@@ -19,18 +20,26 @@ export default class Controlador {
         return this.analizador;
     }
 
+    esLl1(){
+        return this.esll1;
+    }
+
     obtenerObjeto(datos){
         let objeto = JSON.parse( datos );
         this.setObjeto(objeto);
-        this.analizador.AnalizarGramatica( objeto );
+        this.esll1 = this.analizador.AnalizarGramatica( objeto );
     }
 
     primeros () {
-        console.log(this.analizador.getPrimeros());
+        return this.analizador.getPrimeros();
     }
 
     siguientes () {
-        console.log(this.analizador.getSiguientes())
+        return this.analizador.getSiguientes();
+    }
+
+    conjuntoPreduccion () {
+        return this.analizador.getConjuntoPre();
     }
 
 }

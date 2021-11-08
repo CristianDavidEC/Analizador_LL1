@@ -51,13 +51,36 @@
                         <b>Gramatica</b>
                     </label>
                     <div id="contenido" class="border bg-light rounded mb-3 p-2 scroll">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum officia, sequi obcaecati
-                            quos ut nam rem culpa unde vel cum esse iste quod. Officia earum error asperiores rerum labore?
+                        <p>
+                            Aqui podra previsualizar la gramatica que desea analizar.
                         </p>
                     </div>
-                    <button class="btn color-blue mb-3" id="analizar-gramatica">
+                    <button class="btn color-blue mb-3" data-bs-toggle="modal" data-bs-target="#modal-analizar"
+                        id="analizar-gramatica">
                         <i class="bi bi-terminal"></i> Analizar Gramatica
                     </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-analizar" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Informacion del Analisis</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center" id='analisis'>
+                                    <div id="respuesta">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
 
@@ -67,15 +90,15 @@
                 </label>
 
                 <div id="resultado" class="border bg-light rounded mb-3 p-2 scroll">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptatum officia, sequi obcaecati
-                        quos ut nam rem culpa unde vel cum esse iste quod. Officia earum error asperiores rerum labore?
-                    </p>
+                    
                 </div>
 
                 <div class="d-flex justify-content-between">
                     <button class="btn color-blue mb-3" id="primeros"><i class="bi bi-terminal"></i> Primeros</button>
-                    <button class="btn color-blue mb-3" id="siguientes"><i class="bi bi-arrow-bar-right"></i> Siguientes</button>
-                    <button class="btn color-blue mb-3" id="conjunto"><i class="bi bi-code-slash"></i> Conjunto Prediccion</button>
+                    <button class="btn color-blue mb-3" id="siguientes"><i class="bi bi-arrow-bar-right"></i>
+                        Siguientes</button>
+                    <button class="btn color-blue mb-3" id="conjunto"><i class="bi bi-code-slash"></i> Conjunto
+                        Prediccion</button>
                     <button class="btn color-blue mb-3" id="todo"><i class="bi bi-braces"></i> Todo</button>
                 </div>
             </div>
